@@ -1,0 +1,260 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <div class="single-header my-3">
+      <header class="single-inner " >
+        <div class="col-6 d-inline-block">
+			<img [routerLink]="['/listing']" class="single-back" src="assets/image/images.png" alt="">
+        <h6 class="d-inline-block  text-white mx-2">Back</h6>
+      </div>
+        <div class="col-6 text-end d-inline-block">
+			<img class="single-previous"  src="assets/image/images.png" alt="">
+
+        <h6 class="d-inline-block mx-2  text-white">previous</h6>
+      </div>
+				</header>
+      </div>
+      <!-- **************************** -->.
+      <div class="row">
+      <div class="col-9">
+        <div class="card ">
+          <div class="single_imagePage d-inline-block ">
+          <div class="card-body" >
+            <div class="d-inline-block col-10">
+              <div class="">
+                <h2 class="listing-title" [innerHTML]="todoList.title['rendered'] "></h2>
+                  <img src="assets/image/footer_sp.png" alt="">
+              </div >
+
+            </div>
+
+            <div class=" d-inline-block mb-1">
+
+              <img class="" src="assets/image/star-inactive.png" alt="">
+                <a class=" btn btn-secondary btn-rounded-circle mx-3  " href="">save</a>
+            </div>
+          </div>
+        </div>
+        <img src="{{todoList.better_featured_image['timb_source_url']}}"
+        title="{{todoList.title.title['rendered']}}"
+        alt="{{todoList.title.title['rendered']}}">
+      </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body ">
+            <div class="" >
+              <img class="d-inline-block" src="assets/image/summary-icons/map.png" alt="">
+                <p class="d-inline-block mx-3" >Pahang</p>
+            </div>
+            <br>
+            <div >
+              <img   src="assets/image/summary-icons/mileage.png" alt="">
+            </div><br>
+            <div class="mx-2" >
+              <img class="d-inline-block" src="assets/image/summary-icons/condition.png" alt="">
+                <p class="d-inline-block mx-3" >Used</p>
+            </div><br>
+            <div class="mx-2" >
+              <img class="d-inline-block" src="assets/image/summary-icons/transmission.png" alt="">
+                <p class="d-inline-block mx-3" >N/A</p>
+            </div><br>
+            <div class="mx-2" >
+              <img class="d-inline-block mx-2" src="assets/image/summary-icons/mfg-year.png" alt="">
+                <p class="d-inline-block mx-3" > 2007</p>
+            </div><br>
+            <div class="mx-2" >
+              <img class="d-inline-block" src="assets/image/summary-icons/fuel-type.png" alt="">
+            </div><br>
+            <div class="mx-2" >
+              <img class="d-inline-block" src="assets/image/summary-icons/engine-capacity.png" alt="">
+                <p class="d-inline-block mx-3" >0</p>
+            </div><br>
+            <div class="mx-2" >
+              <img class="d-inline-block" src="assets/image/summary-icons/warranty.png" alt="">
+                <p class="d-inline-block mx-3" >0 months</p>
+            </div><br>
+         </div>
+          <div class="card-body">
+            <img style="width: 36px;" src="assets/image/social-icons/facebook.png" alt="">
+            <img style="width: 36px;" src="assets/image/social-icons/linkedin.png" alt="">
+            <img style="width: 36px;" src="assets/image/social-icons/wechat.png" alt="">
+            <img style="width: 36px;" src="assets/image/social-icons/whatsapp.png" alt="">
+            <img style="width: 36px;" src="assets/image/social-icons/print.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- ******************************* -->
+      <div class="card my-3">
+        <div class="card-body">
+          <div class="Machine Details">
+            <h4>Machine Details</h4>
+            <img src="assets/image/footer_sp.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card my-3">
+        <div class="card-body">
+          <div class="">
+            <h4>Description</h4>
+            <img src="assets/image/footer_sp.png" alt="">
+            <p>well keep and in good condition</p>
+          </div>
+        </div>
+      </div>
+      <div class="card my-3">
+        <div class="card-body">
+          <div class="">
+            <h4>Enquiry</h4>
+            <img src="assets/image/footer_sp.png" alt="">
+            <section class="section-padding no-top gray">
+                 <form id="mha-register-form"
+                     (ngSubmit)="onSubmit(model)" >
+                       <div class="form-group required d-inline-block w-23 mx-1 ">
+                         <label >Name</label><br>
+                         <input class="form-control "
+                         type="email"
+                         name="name"
+                         placeholder="Your Email"
+                         [(ngModel)]="model.name"
+                         required
+                         >
+                       </div>
+
+                       <div class="form-group required d-inline-block w-20 mx-2 ">
+                         <label>Email</label><br>
+                         <input class="form-control "
+                         type="email"
+                         name="email"
+                         placeholder="Your Email"
+                         [(ngModel)]="model.email"
+                         required
+                         >
+                       </div>
+
+                       <div class="form-group required d-inline-block w-22  mx-3">
+                         <label>Phone</label>
+                         <input class="form-control"
+                         type="text"
+                         name="phone"
+                         placeholder="Your Phone"
+                         [(ngModel)]="model.phone"
+                         required
+                         >
+                       </div>
+
+                       <div class="form-group required d-inline-block w-22 mx-3">
+                         <label>Location</label>
+                         <input class="form-control"
+                         type="text"
+                         name="location"
+                         placeholder="Your Phone"
+                         [(ngModel)]="model.phone"
+                         required
+                         >
+                       </div>
+                       <div class="form-group required ">
+                         <label>Message</label>
+                         <textarea  class="form-control"
+                         type="text"
+                         name="location"
+                         placeholder="Your message"
+                         [(ngModel)]="model.phone"
+                         required name="" id="" ></textarea>
+                       </div>
+                       <br>
+                      <div class="text-center ">
+                       <button class="btn btn-warning py-3 px-5" type="submit">Send Enquiry</button>
+                     </div><br>
+                   </form>
+           </section>
+          </div>
+        </div>
+      </div>
+
+  </div>
+    <div class="col-3">
+      <section class="section-padding no-top gray card">
+         <div class="form-grid card-body">
+            <form id="mha-register-form"
+                (ngSubmit)="onSubmit(model)" >
+                <h3>Enquiry</h3>
+                  <img src="assets/image/footer_sp.png" alt="">
+                  <div class="form-group required">
+                    <label>Name</label>
+                    <input class="form-control"
+                    type="email"
+                    name="name"
+                    placeholder="Your Email"
+                    [(ngModel)]="model.name"
+                    required
+                    >
+                  </div>
+
+                  <div class="form-group required">
+                    <label>Email</label>
+                    <input class="form-control"
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    [(ngModel)]="model.email"
+                    required
+                    >
+                  </div>
+
+                  <div class="form-group required">
+                    <label>Phone</label>
+                    <input class="form-control"
+                    type="text"
+                    name="phone"
+                    placeholder="Your Phone"
+                    [(ngModel)]="model.phone"
+                    required
+                    >
+                  </div>
+
+                  <div class="form-group required">
+                    <label>Location</label>
+                    <input class="form-control"
+                    type="text"
+                    name="location"
+                    placeholder="Your Phone"
+                    [(ngModel)]="model.phone"
+                    required
+                    >
+                  </div>
+                  <div class="form-group required">
+                    <label>Message</label>
+                    <textarea  class="form-control"
+                    type="text"
+                    name="location"
+                    placeholder="Your message"
+                    [(ngModel)]="model.phone"
+                    required name="" id="" ></textarea>
+                  </div>
+                  <br>
+                 <div class="d-grid gap-2 ">
+                  <button class="btn btn-warning py-3" type="submit">Send Enquiry</button>
+                </div><br>
+              </form>
+          </div>
+      </section>
+    </div>
+  </div>
+  <div>
+    <ng-container *ngIf="5+6 == 10; else elseTemplate">
+   <p>your write</p>
+     </ng-container>
+     <ng-template #elseTemplate>
+   your are wrong
+     </ng-template>
+   </div>
+</div>
+
+
+
+
+
+

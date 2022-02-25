@@ -1,0 +1,176 @@
+<!-- Find construction equipment -->
+
+<div class="equriment-back">
+<div class="container">
+  <div class="row">
+    <div class="col-7 p-0 ">
+        <div class="card " >
+          <div class="card-body style" style="    padding-bottom: 45px;">
+            <form id="mha-register-form"
+              (ngSubmit)="onSubmit(model)"  >
+              <h2>Find construction equipment</h2>
+              <br><br>
+              <li class="d-inline-block mx-3"><a  href="#">All</a></li>
+              <li class="d-inline-block mx-3"><a href="#">News</a></li>
+              <li class="d-inline-block mx-3"><a href="#">Used</a></li>
+              <hr>
+              <br><br>
+              <div class="">
+                <select class="form-select d-inline-block w-50" aria-label="Default select example">
+                  <option selected disabled=true [(ngModel)]="model.name"
+                  required>Type of Equriment</option>
+                  <option *ngFor="let todo of todoList">{{todo.name}}</option>
+                </select>
+
+                <select class="form-select  d-inline-block w-50" aria-label="Default select example" >
+                  <option selected disabled=true >Location</option>
+                  <option *ngFor="let todo of todoLocation">{{todo.name}}</option>
+                </select>
+                <br><br>
+                <select class="form-select  d-inline-block w-50" aria-label="Default select example">
+                  <option selected disabled=true>Makes: All Makes</option>
+                  <option value="1" *ngFor="let todo of todoMaker">{{todo.name}}</option>
+
+                </select>
+                <select class="form-select  d-inline-block w-25" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+
+                <select class="form-select  d-inline-block w-25" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <br><br>
+                <input class="w-100" type="text" name="" id="" placeholder="Search Keyboard">
+              </div>
+            <hr>
+            <br><br>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right MD text-end">
+                <button type="submit" class="btn btn-lg btn-warning Round-btn ">Search</button>
+              </div><br>
+            </form>
+          </div>
+        </div>
+    </div>
+    <!-- Search By Category -->
+
+        <div class="col-5 p-0">
+          <div class="equipments-wrap ">
+            <div class="card col-12 h-100 d-inline-block">
+              <h2> Search By Category</h2>
+              <form action="" style="padding-top: 1px;">
+                <div class="col-3 d-inline-block" *ngFor="let todo of todoList" >
+                    <div class="sldeicon col-9">
+                     <a  [routerLink]="['listing']" [queryParams]="{todo: todo.id}" title="{{todo.name}}">
+                     <img _ngcontent-c3="" width="100" src="https://www.machinehubasia.com/api/timthumb.php?src={{todo.thumbnail}}&amp;w=62" alt="Excavators" title="Excavators"></a>
+                     <a class="text-dark" style="text-decoration: none;" [routerLink]="['listing']"  width="100" [queryParams]="{todo: todo.id}" title="{{todo.name}}"><span>{{todo.name}}</span></a>
+                   </div>
+                </div>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+<!-- Latest New -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-3 my-5">
+      <div class="card my-3" style="width: 18rem;">
+        <h4>Latest New</h4>
+        <img src="assets/image/footer_sp.png" alt="...">
+        <div class="card-body">
+          <div class="col-6 d-inline-block">
+          <img class="card-title w-50" src="assets/image/Logo.png" alt="">
+        </div>
+        <div class="col-6 d-inline-block my-3">
+        <a style="text-decoration: none;" class="text-dark" [routerLink]="['/machine_hub/:id']"  >
+          <h6 class="card-text">launch of machine hub Asia platform in Malaysia</h6>
+        </a>
+        <p class="card-text">Machine Hub Asia, the online marketplace for heavy machinery is offici ...</p>
+
+        </div>
+        </div>
+      </div>
+        <div class="card" style="width: 18rem;">
+            <div class="widget widget_media_image"><a href="http://www.htlubricant.com.my/">
+              <img width="285" height="300" src="https://www.machinehubasia.com/api/wp-content/uploads/2018/05/HTLubricant-Mobil-Delvac-1.jpeg" /></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recents Listing -->
+
+    <div class="col">
+      <div class="my-5 ">
+<div class=" col-6 d-inline-block">
+
+  <h4 >Recents Listing</h4>
+  <img src="assets/image/footer_sp.png" />
+</div>
+        <div class="col-6 text-end d-inline-block " >
+
+          <a class="text-warning mx-5" style="text-decoration: none;" [routerLink]="['/listing']" routerLinkActive="router-link-active"  >View all</a>
+        </div>
+      </div>
+
+    <div class="card d-inline-block mx-2 my-3" style="width: 31%" *ngFor="let todo of todoListing">
+      <a  [routerLink]="'/single/'+todo.slug+'-'+todo.id" title="{{todo.title['rendered']}}">
+        <img class="w-100" [routerLink]="'/single/'+todo.slug+'-'+todo.id" src="https://www.machinehubasia.com/api/timthumb.php?src={{todo.better_featured_image['source_url']}}&w=265&h=150&zc=2" title="{{todo.title['rendered']}}" alt="{{todo.title['rendered']}}"/></a>
+      <div class="card-body">
+        <div class="price-bg text-end ">{{(todo.mha_metadata.hasOwnProperty('_hide_price') && todo.mha_metadata['_hide_price'][0] == 1) ? 'Call for price' : todo.mha_metadata['_price'][0] }}</div>
+        <div>
+
+          <a class="fs-sm-2-0 text-dark" style="text-decoration: none;" [innerHTML]="todo.title['rendered'] " [routerLink]="'/l/'+todo.slug+'-'+todo.id" [title]="todo.title['rendered']"></a>
+      </div>
+      <div class="recent-listing ">
+        <img  class="d-inline-block mx-1" style="width: 15px;" src="assets/image/summary-icons/map.png" alt="">
+        <p class="d-inline-block mx-1 " >Pahang</p>
+        <img class="d-inline-block mx-1" style="width: 15px;" src="assets/image/summary-icons/mileage.png" alt="">
+        <img style="width: 15px;" src="assets/image/summary-icons/condition.png" alt="">
+        <p class="d-inline-block">Used</p>
+        <img class="d-inline-block" style="width: 15px;" src="assets/image/summary-icons/transmission.png" alt="">
+        <p class="d-inline-block">N/A</p>
+        <img class="d-inline-block" style="width: 15px;" src="assets/image/summary-icons/mfg-year.png" alt="">
+        <p class="d-inline-block">2007</p>
+      </div>
+      <div>
+        <a [routerLink]="'/single/'+todo.slug+'-'+todo.id" title="{{todo.title['rendered']}}" class="btn btn-warning">DETAIL</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- /.SPlogo-full -->
+<div class="SPlogo-full"><div class="container">
+  <div class="row">
+    <div class="col-xs2 col-sm-6 col-md-6 col-lg-2 ">
+      <img src="https://www.machinehubasia.com/api/timthumb.php?src=https://www.machinehubasia.com/api/wp-content/uploads/2018/03/denyo-logo.png&amp;h=30">
+    </div>
+    <div class="col-xs2 col-sm-6 col-md-6 col-lg-2 ">
+      <img src="https://www.machinehubasia.com/api/timthumb.php?src=https://www.machinehubasia.com/api/wp-content/uploads/2018/03/toyota-logo.png&amp;h=30">
+    </div>
+    <div class="col-xs2 col-sm-6 col-md-6 col-lg-2 ">
+      <img src="https://www.machinehubasia.com/api/timthumb.php?src=https://www.machinehubasia.com/api/wp-content/uploads/2018/01/s-logo3.png&amp;h=30">
+    </div><div class="col-xs2 col-sm-6 col-md-6 col-lg-2 iphone-padding">
+      <img src="https://www.machinehubasia.com/api/timthumb.php?src=https://www.machinehubasia.com/api/wp-content/uploads/2018/01/s-logo2.png&amp;h=30">
+    </div>
+    <div class="col-xs2 col-sm-6 col-md-6 col-lg-2 ">
+      <img src="https://www.machinehubasia.com/api/timthumb.php?src=https://www.machinehubasia.com/api/wp-content/uploads/2018/01/s-logo1.png&amp;h=30">
+    </div>
+    <div class="col-xs2 col-sm-6 col-md-6 col-lg-2 ">
+      <img src="https://www.machinehubasia.com/api/timthumb.php?src=https://www.machinehubasia.com/api/wp-content/uploads/2018/01/s-logo.png&amp;h=30">
+    </div>
+  </div>
+</div>
+</div>

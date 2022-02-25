@@ -1,0 +1,151 @@
+<div class="page-header-area-2 gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="small-breadcrumb">
+          <div class="breadcrumb-link">
+            <ul>
+              <li>
+                <a [routerLink]="['/']" title="Go to home">
+                  Home
+                </a>
+              </li>
+              <li class="active">
+                <a href="javascript:void(0);" class="active">
+                  Register
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-page">
+            <h4>Rent</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section-padding no-top gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="form-grid">
+          <form id="mha-register-form"
+          (ngSubmit)="onSubmit(model)" >
+            <div class="form-group required">
+              <label>Name</label>
+              <input class="form-control"
+              type="text"
+               name="display_name"
+               placeholder="Your Name"
+               [(ngModel)]="model.display_name"
+               required
+              >
+            </div>
+
+            <div class="form-group required">
+              <label>Email</label>
+              <input class="form-control"
+              type="email"
+              name="user_email"
+              placeholder="Your Email"
+              [(ngModel)]="model.display_name"
+              required
+              >
+
+            </div>
+
+            <div class="form-group required">
+              <label>Phone*</label>
+              <input class="form-control"
+              type="password"
+              name="password"
+              placeholder="Your Password"
+              [(ngModel)]="model.password"
+              required
+              >
+            </div>
+            <div class="form-group required">
+              <label>Type of machine *</label>
+              <input class="form-control"
+              type="Type_of_machine"
+              name="Type_of_machine"
+              placeholder="Type_of_machine"
+              [(ngModel)]="model.Type_of_machine"
+              required
+              >
+            </div>
+            <div class="form-group required">
+              <label>Quntity *</label>
+              <input class="form-control"
+              type="quntity"
+              name="quntity"
+              placeholder="Quntity"
+              [(ngModel)]="model.quntity"
+              required
+              >
+            </div>
+            <div class="form-group required">
+              <label>Location *</label>
+              <input class="form-control"
+              type="location"
+              name="location"
+              placeholder="Location"
+              [(ngModel)]="model.location"
+              required
+              >
+            </div>
+            <div class="form-group required">
+              <label>Date & Time *</label>
+              <input class="form-control"
+              type="date_&_time"
+              name="date_&_time"
+              placeholder="Your Date_&_Time"
+              [(ngModel)]="model.date_time"
+              required
+              >
+            </div>
+            <div class="form-group required">
+              <label>Duration of use *</label>
+              <input class="form-control"
+              type="duration"
+              name="duration"
+              placeholder=" Duration"
+              [(ngModel)]="model.duration"
+              required
+              >
+            </div>
+            <div class="form-group required">
+              <label>Remarks *</label>
+              <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="3"
+              type="remarks"
+              name="remarks"
+              placeholder=" Remarks"
+              [(ngModel)]="model.remarks"
+              required></textarea>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button class="btn btn-warning" type="submit">Submit</button>
+            </div>
+         
+
+            <br>
+
+            <p class="text-center help-block">
+              <a [routerLink]="['/login']"
+              title="Already registered login here?">
+              Already registered login here?
+            </a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,19 @@
+img.single-back {
+  width: 20px;
+}
+img.single-previous {
+  width: 20px;
+  color: white;
+}
+.single-header {
+  background-color: black;
+}
+.single-inner {
+  background: #000;
+  padding: 10px 10px;
+  color: #fff;
+}
+.single_imagePage {
+  background-color: aliceblue;
+  background-image: url();
+}

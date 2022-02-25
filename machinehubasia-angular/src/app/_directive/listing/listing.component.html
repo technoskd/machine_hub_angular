@@ -1,0 +1,203 @@
+<div class="page-header-area-2 gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="small-breadcrumb">
+          <div class="breadcrumb-link">
+            <ul>
+              <li>
+                <a [routerLink]="['/']" title="Go to home">
+                  Home
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+  <div class="container">
+    <div class="row">
+    <div class="col-3">
+      <div class="single-header my-3">
+        <header class="single-inner " >
+          <div class="col-6 d-inline-block py-3">
+          <h6 class="d-inline-block  text-white mx-2">Refine Search</h6>
+        </div>
+          <div class="col-6 text-end d-inline-block">
+         <a [routerLink]="['/routePath']" routerLinkActive="router-link-active" > <h6 class="d-inline-block mx-2  text-warning">restart</h6></a>
+        </div>
+          </header>
+        </div>
+
+      <div class="d-inlin">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <input type="text">
+
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <select class="form-select" aria-label="Default select example">
+            <option selected disabled=true >Type of Equriment</option>
+            <option *ngFor="let todo of todoList" >{{todo.name}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <select class="form-select" aria-label="Default select example">
+            <option selected disabled=true >Type of Equriment</option>
+            <option >todoname</option>
+          </select>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<div class="border text-center py-2 bg-warning ">
+  <h6><a class="text-dark" style="text-decoration: none;" [routerLink]="['/routePath']" routerLinkActive="router-link-active" >Search</a></h6>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="widget widget_media_image"><a href="http://www.htlubricant.com.my/">
+    <img width="285" height="300" src="https://www.machinehubasia.com/api/wp-content/uploads/2018/05/HTLubricant-Mobil-Delvac-1.jpeg" /></a>
+  </div>
+</div>
+<div class="card my-3" style="width: 18rem;">
+  <h4>Latest New</h4>
+  <img src="assets/image/footer_sp.png" alt="...">
+  <div class="card-body">
+    <div class="col-6 d-inline-block">
+    <img class="card-title w-50" src="assets/image/Logo.png" alt="">
+  </div>
+  <div class="col-6 d-inline-block my-3">
+  <a style="text-decoration: none;" class="text-dark" [routerLink]="['/machine_hub/:id']"  >
+    <h6 class="card-text">launch of machine hub Asia platform in Malaysia</h6>
+  </a>
+  <p class="card-text">Machine Hub Asia, the online marketplace for heavy machinery is offici ...</p>
+
+  </div>
+  </div>
+</div>
+  </div>
+  <!-- ******************************************************************* -->
+  <div class="col my-3">
+    <div class="d-inline">
+      <div class="single-header my-3 py-3">
+        <header class="single-inner " >
+          <div class="col-6 d-inline-block">
+          <h6 class="d-inline-block  text-white mx-2">34 Match</h6>
+        </div>
+        <div class="col-6 d-inline-block">
+        <h6 class="text-white d-inline-block text-end col-4 mx-2">Sort by</h6>
+
+          <div class="col-7 text-end d-inline-block">
+            <select class="form-select col-6" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+        </div>
+      </div>
+          </header>
+        </div>
+  </div>
+  <div class="col-6 text-start d-inline-block">
+    <h5 class="d-inline-block mx-3">Show</h5>
+    <select class="form-select w-25 d-inline-block text-start" aria-label="Default select example">
+      <option selected>30</option>
+      <option value="1">10</option>
+      <option value="2">20</option>
+      <option value="3">30</option>
+    </select>
+</div>
+  <div class="col-6 text-end d-inline-block">
+    <select class="form-select w-25 mx-5 " aria-label="Default select example">
+      <option selected>Open this select menu</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+</div>
+
+<div class="card my-3" *ngFor="let todo of todoListing" >
+  <div class="card-body ">
+    <h4 > <a class="fs-sm-2-0 text-dark"
+      [innerHTML]="todo.title['rendered'] "
+      [routerLink]="'/l/'+todo.slug+'-'+todo.id"
+      [title]="todo.title['rendered']">
+    </a>
+  </h4><br>
+
+      <img src="assets/image/footer_sp.png" alt="">
+      <br>
+    <div class="col-6 d-inline-block">
+       <a  [routerLink]="'/single/'+todo.slug+'-'+todo.id"
+          title="{{todo.title['rendered']}}">
+          <img
+          [routerLink]="'/single/'+todo.slug+'-'+todo.id"
+          src="https://www.machinehubasia.com/api/timthumb.php?src={{todo.better_featured_image['source_url']}}&w=265&h=150&zc=2"
+          title="{{todo.title['rendered']}}"
+          alt="{{todo.title['rendered']}}"/>
+       </a>
+</div>
+<div class="col-6 d-inline-block my-3">
+    <h5 class="card-title">MYR
+      {{(todo.mha_metadata.hasOwnProperty('_hide_price') && todo.mha_metadata['_hide_price'][0] == 1) ? 'Call for price' : todo.mha_metadata['_price'][0] }}
+    </h5>
+    <h5 class="card-title">
+      {{(todo['taxonomy-conditions'][0].name) }}
+    </h5>
+    <p>{{todo.date}}</p>
+    <div class="mx-3" >
+      <img class="d-inline-block" src="assets/image/summary-icons/condition.png" alt="">
+        <p class="d-inline-block mx-3" >Used</p>
+      <img class="d-inline-block" src="assets/image/summary-icons/transmission.png" alt="">
+        <p class="d-inline-block mx-3" >N/A</p>
+      <img class="d-inline-block mx-2" src="assets/image/summary-icons/mfg-year.png" alt="">
+        <p class="d-inline-block mx-3" > 2007</p>
+      <img class="d-inline-block" src="assets/image/summary-icons/fuel-type.png" alt=""><br>
+      <img class="d-inline-block" src="assets/image/summary-icons/engine-capacity.png" alt="">
+        <p class="d-inline-block mx-3" >0</p>
+      <img class="d-inline-block" src="assets/image/summary-icons/warranty.png" alt="">
+        <p class="d-inline-block mx-3" >0 months</p>
+    </div>
+    <a [routerLink]="['/login']" routerLinkActive="router-link-active"  class="btn btn-primary mx-2">Save</a>
+    <a [routerLink]="'/single/'+todo.slug+'-'+todo.id" routerLinkActive="router-link-active"  class="btn btn-primary mx-2">Equriment</a>
+    <a [routerLink]="'/single/'+todo.slug+'-'+todo.id" class="btn btn-primary mx-2">View</a>
+
+  </div>
+
+</div>
+</div>
+
+
+
+
+</div>
+</div>
+</div>
+</form>

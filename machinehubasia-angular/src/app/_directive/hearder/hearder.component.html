@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container">
+    <div class="dropdown ml-5 text-white">
+      <a class="btn text-white btn-sm dropdown-toggle shadow-none" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        Buy
+      </a>
+        <ul class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+        <li  *ngFor="let todo of todoList">
+          <a [routerLink]="['/']" [queryParams]="{todo: todo.id}" title="{{todo.name}}">
+            <td class="">{{todo.name}}</td>
+
+          </a>
+        </li>
+      </ul>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item navbar-light">
+          <a class="nav-link" [routerLink]="['/rent']" title="Go to home">Rent</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']" title="Go to home">About</a>
+
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contact']" title="Go to home">Contact</a>
+
+        </li>
+      </ul>
+    </div>
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/login']" title="Go to home">Sing In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/registration']" title="Go to home">Register</a>
+        </li>
+      </ul>
+  </div>
+</nav>
+
+ <section>
+   <div class="container">
+     <div class="row">
+       <div class="col">
+      <img src="assets/image/Logo.png" class="" alt="...">
+    </div>
+    <div class="col text-end">
+      <p><i>New and used heavy machinery in Malaysia & Asia</i></p>
+      <h2>Sign up today - it's Free!</h2>
+    </div>
+     </div>
+   </div>
+ </section>
+
+

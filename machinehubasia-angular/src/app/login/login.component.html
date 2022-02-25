@@ -1,0 +1,92 @@
+<div class="page-header-area-2 gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="small-breadcrumb">
+          <div class="breadcrumb-link">
+            <ul>
+              <li>
+                <a class="text-secondary" [routerLink]="['/']" title="Go to home">
+                  Home
+                </a>
+              </li>
+              >
+              <li class="active">
+                <a  href="javascript:void(0);" class="active">
+                  login
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-page">
+            <h4>Login</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section-padding no-top gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 ">
+        <div class="form-grid" >
+          <form id="mha-register-form"
+          (ngSubmit)="onSubmit(model)" >
+
+
+          <br>
+
+            <div class="form-group required">
+              <label>Email</label>
+              <input class="form-control"
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              [(ngModel)]="model.email"
+              required
+              >
+
+            </div>
+
+            <div class="form-group required">
+              <label>Password</label>
+              <input class="form-control"
+              type="password"
+              name="password"
+              placeholder="Your Password"
+              [(ngModel)]="model.password"
+              required
+              >
+            </div>
+
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-12 col-sm-7">
+                  <input type="checkbox"  name="tnc"  [(ngModel)]="model.tnc" />
+                    <span> Remember me </span>
+                </div>
+                <div class="col-xs-12 col-sm-5 text-right">
+                  <p class="help-block">
+                    <a [routerLink]="['/forgot']" title="Forgot password">Forgot password?</a>
+                  </p>
+                </div>
+              </div>
+              </div>
+           <div class="d-grid gap-2">
+            <button class="btn btn-warning" type="submit">Submit</button>
+          </div><br>
+            <p class="text-center help-block">
+              <a [routerLink]="['/registration']"
+              title="Already registered login here?">
+              Already registered login here?
+            </a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
